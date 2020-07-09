@@ -5,6 +5,19 @@
 /* navbar styling */
 nav {
   display: flex;
+  background-color: #F5E0E0;
+  padding: 5%;
+  max-width: 100vw;
+}
+
+.links {
+  display: flex;
   justify-content: space-around;
-  background-color: pink;
+  width: 90vw;
+  padding: 5%;
+}
+
+.link {
+  text-decoration: none;
+  color: #999292;
 }
