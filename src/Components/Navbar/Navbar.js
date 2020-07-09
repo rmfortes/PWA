@@ -1,19 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 class Navbar extends Component {
-    render() {
-        return (
-            <div>
-               <nav>
-                   <Link to="/"><p>ABOUT</p></Link>
-                   <Link to="/camera"><p>SNAP</p></Link>
-                   <Link to="/map"><p>MAP</p></Link>
-               </nav>
-            </div>
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      navBarLinks: [
+        { item: "ABOUT", link: "/" },
+        { item: "SNAP", link: "/camera" },
+        { item: "MAP", link: "/map" }
+      ],
+    };
+  }
+
+  render() {
+    let navBarLinks = this.state.navBarLinks.map((navBarLink, i) => (
+
+      <Link to={navBarLink.link} key = {i}>{navBarLink.item}</Link>
+  
+    ));
+
+    return (
+      <div>
+        <nav>
+          {navBarLinks}
+        </nav>
+      </div>
+    );
+  }
 }
 
 export default Navbar;
