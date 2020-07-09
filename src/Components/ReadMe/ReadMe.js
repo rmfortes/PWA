@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Camera extends Component {
+class ReadMe extends Component {
     render() {
         return (
             <div>
-              <p>Camera Component</p>  
+                <p>Read Me Component</p>
             </div>
         );
     }
 }
 
-export default Camera;
+export default ReadMe;
