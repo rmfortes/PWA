@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Navbar from "../Navbar/Navbar";
+import Webcam from "react-webcam";
+
+// const WebcamComponent = () => <Webcam />;
 
 class Camera extends Component {
     render() {
         return (
             <div>
-                {/* <Navbar /> */}
-              <p>Camera Component</p>  
+              <Webcam />  
             </div>
         );
     }

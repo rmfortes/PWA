@@ -1,3 +1,4 @@
+/* for mobile phones */
 .App {
   max-width: 100vw;
 }
@@ -6,7 +7,7 @@
 nav {
   display: flex;
   background-color: #F5E0E0;
-  padding: 5%;
+  height: 10%;
   max-width: 100vw;
 }
 
@@ -21,3 +22,15 @@ nav {
   text-decoration: none;
   color: #999292;
 }
+
+/* for tablets  */
+@media only screen and (min-width: 900px) {
+  nav {
+    height: 5%;
+  }
+}
+
+/* for desktop */
+
+
+
