@@ -23,6 +23,15 @@ nav {
   color: #999292;
 }
 
+/* camera styling */
+.camera {
+  /* border: solid red; */
+}
+
+.button {
+  width: 100vw;
+}
+
 /* for tablets  */
 @media only screen and (min-width: 900px) {
   nav {
