@@ -18,8 +18,8 @@ class Camera extends Component {
   render() {
     const videoConstraints = {
       width: 400,
-      height: 810,
-      facingMode: "user",
+      height: 795,
+      // facingMode: "user",
     };
 
     return (
