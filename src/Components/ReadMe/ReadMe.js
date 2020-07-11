@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
-import README from "../../../src/README.md";
+import README from "./README.md";
 
 class ReadMe extends Component {
   constructor() {
