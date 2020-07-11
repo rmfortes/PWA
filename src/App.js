@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import ReadMe from "./Components/ReadMe/ReadMe";
 import Map from "./Components/Map/Map";

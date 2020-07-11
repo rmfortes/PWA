@@ -14,6 +14,7 @@ class Navbar extends Component {
   }
 
   render() {
+      
     let navBarLinks = this.state.navBarLinks.map((navBarLink, i) => (
       <NavLink
         exact

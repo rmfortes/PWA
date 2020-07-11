@@ -6,7 +6,7 @@
 /* navbar styling */
 nav {
   display: flex;
-  background-color: #F5E0E0;
+  background-color: #f5e0e0;
   height: 10%;
   max-width: 100vw;
 }
@@ -24,12 +24,16 @@ nav {
 }
 
 /* camera styling */
-.camera {
-  /* border: solid red; */
-}
-
 .button {
   width: 100vw;
+  font-size: 15px;
+  color: #999292;
+  border: none;
+  padding: 10px;
+}
+
+.button:active {
+  background-color: #646161;
 }
 
 /* for tablets  */
@@ -40,6 +44,3 @@ nav {
 }
 
 /* for desktop */
-
-
-

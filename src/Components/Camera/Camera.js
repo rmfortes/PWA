@@ -2,15 +2,24 @@ import React, { Component } from "react";
 import Webcam from "react-webcam";
 
 class Camera extends Component {
+  constructor(props) {
+    super(props);
+  }
   setRef = (webcam) => {
     this.webcam = webcam;
+  };
+  
+  capture = e => {
+    e.preventDefault()
+    const imageSrc = this.webcam.getScreenshot();
+    console.log(imageSrc);
   };
 
   render() {
     const videoConstraints = {
       width: 400,
       height: 810,
-      facingMode: "user"
+      facingMode: "user",
     };
 
     return (
@@ -24,7 +33,12 @@ class Camera extends Component {
           width={370}
           videoConstraints={videoConstraints}
         />
-        <button className="button" onClick={this.capture}>Snap Photo</button>
+
+        <form onSubmit={this.capture}>
+          <button className="button" onClick={this.capture}>
+            SNAP PHOTO
+          </button>
+        </form>
       </div>
     );
   }
