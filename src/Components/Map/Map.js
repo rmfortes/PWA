@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 const mapStyles = {
   width: "100%",
@@ -11,23 +11,30 @@ class MapContainer extends Component {
     super(props);
 
     this.state = {
-
-    //? how do I store my photo's data here?  
-    //? how to pass in props from camera component? 
-      
       stores: [
         {
-          latitude: props.latitude, 
-          longitude: props.longitude
+          latitude: props.latitude,
+          longitude: props.longitude,
         },
-        { lat: 47.49855629475769, lng: -122.14184416996333 },
-        { latitude: 47.359423, longitude: -122.021071 },
-        { latitude: 47.2052192687988, longitude: -121.988426208496 },
-        { latitude: 47.6307081, longitude: -122.1434325 },
-        { latitude: 47.3084488, longitude: -122.2140121 },
-        { latitude: 47.5524695, longitude: -122.0425407 },
       ],
     };
+  }
+
+  componentDidMount() {
+
+    let currentComponent = this;
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+      navigator.geolocation.getCurrentPosition(function (position) {
+        currentComponent.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        });
+        console.log(currentComponent.state)
+      })
+    });
   }
 
   displayMarkers = () => {
