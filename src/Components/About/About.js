@@ -5,7 +5,7 @@ class About extends Component {
     return (
       <div className="about">
         <h1>Snap Map</h1>
-        <p>Snap Map is an app that allows users to take photos and see their position on a map.
+        <p>Snap Map is a progressive web app that allows users to take photos and see their position on a map.
         <br></br>
           <br></br>To take a photo, click 'SNAP'.
           <br></br>
