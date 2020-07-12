@@ -4,15 +4,21 @@ import Webcam from "react-webcam";
 class Camera extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
+
   setRef = (webcam) => {
     this.webcam = webcam;
   };
-  
-  capture = e => {
-    e.preventDefault()
+
+  capture = (e) => {
+    e.preventDefault();
     const imageSrc = this.webcam.getScreenshot();
     console.log(imageSrc);
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+    });
   };
 
   render() {
