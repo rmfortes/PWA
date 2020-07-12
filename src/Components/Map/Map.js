@@ -13,8 +13,13 @@ class MapContainer extends Component {
     this.state = {
 
     //? how do I store my photo's data here?  
+    //? how to pass in props from camera component? 
       
       stores: [
+        {
+          latitude: props.latitude, 
+          longitude: props.longitude
+        },
         { lat: 47.49855629475769, lng: -122.14184416996333 },
         { latitude: 47.359423, longitude: -122.021071 },
         { latitude: 47.2052192687988, longitude: -121.988426208496 },

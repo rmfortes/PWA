@@ -4,7 +4,10 @@ import Webcam from "react-webcam";
 class Camera extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      latitude: "",
+      longitude: "",
+    };
   }
 
   setRef = (webcam) => {
@@ -13,11 +16,15 @@ class Camera extends Component {
 
   capture = (e) => {
     e.preventDefault();
+    let currentComponent = this;
     const imageSrc = this.webcam.getScreenshot();
     console.log(imageSrc);
     navigator.geolocation.getCurrentPosition(function (position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
+      currentComponent.setState({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      });
+      console.log(currentComponent.state)
     });
   };
 
