@@ -11,19 +11,13 @@ class MapContainer extends Component {
     super(props);
 
     this.state = {
-      stores: [
-        {
-          latitude: props.latitude,
-          longitude: props.longitude,
-        },
-      ],
+          latitude: '',
+          longitude: ''
     };
   }
 
   componentDidMount() {
-
     let currentComponent = this;
-
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
@@ -37,22 +31,6 @@ class MapContainer extends Component {
     });
   }
 
-  displayMarkers = () => {
-    return this.state.stores.map((store, index) => {
-      return (
-        <Marker
-          key={index}
-          id={index}
-          position={{
-            lat: store.latitude,
-            lng: store.longitude,
-          }}
-          onClick={() => console.log("You clicked me!")}
-        />
-      );
-    });
-  };
-
   render() {
     return (
       <div>
@@ -62,7 +40,11 @@ class MapContainer extends Component {
           style={mapStyles}
           initialCenter={{ lat: 38.85, lng: -76.99 }}
         >
-          {this.displayMarkers()}
+          <Marker position={{
+            lat: this.state.latitude,
+            lng: this.state.longitude
+          }} />
+          {/* {this.displayMarkers()} */}
         </Map>
       </div>
     );
