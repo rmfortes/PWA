@@ -7,7 +7,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       navBarLinks: [
-        { item: "ABOUT", link: "/about" },
+        { item: "ABOUT", link: "/" },
         { item: "SNAP", link: "/snap" },
         { item: "MAP", link: "/map" },
       ],
@@ -34,7 +34,7 @@ class Navbar extends Component {
       <div>
         <nav>
           <div className="links">{navBarLinks}</div>
-          <NavbarMenu/>
+          <NavbarMenu />
         </nav>
       </div>
     );

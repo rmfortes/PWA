@@ -17,14 +17,12 @@ class Camera extends Component {
   render() {
     const videoConstraints = {
       width: 400,
-      height: 795,
-      // facingMode: "user",
+      height: 795
     };
 
     return (
       <div>
         <Webcam
-          className="camera"
           audio={false}
           height={710}
           ref={this.setRef}

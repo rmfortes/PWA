@@ -28,6 +28,7 @@ export default function LongMenu() {
   return (
     <div>
       <IconButton
+        className="menuButton"
         aria-label="more"
         aria-controls="long-menu"
         aria-haspopup="true"

@@ -16,7 +16,7 @@ class ReadMe extends Component {
 
   render() {
     const { markdown } = this.state;
-    return <ReactMarkdown source={markdown} />;
+    return <ReactMarkdown className="markdown" source={markdown} />;
   }
 }
 
