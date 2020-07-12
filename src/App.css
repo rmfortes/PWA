@@ -24,19 +24,6 @@ nav {
   color: #999292;
 }
 
-/* camera styling */
-.button {
-  width: 100vw;
-  font-size: 15px;
-  color: #999292;
-  border: none;
-  padding: 10px;
-}
-
-.button:active {
-  background-color: #646161;
-}
-
 /* for tablets  */
 @media only screen and (min-width: 900px) {
   nav {

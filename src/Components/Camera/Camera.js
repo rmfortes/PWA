@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Webcam from "react-webcam";
-import usa-button;
+
 
 class Camera extends Component {
 
@@ -34,10 +34,7 @@ class Camera extends Component {
         />
 
         <form onSubmit={this.capture}>
-          <button className="button" onClick={this.capture}>
-            SNAP PHOTO
-          </button>
-          <button class="usa-button usa-button--base">Default</button>
+        <button class="usa-button usa-button--base usa-focus" onClick={this.capture}>SNAP PHOTO</button>
         </form>
       </div>
     );

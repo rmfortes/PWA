@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "uswds/dist/css/uswds.css";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
