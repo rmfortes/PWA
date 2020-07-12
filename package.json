@@ -50,5 +50,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rmfortes/PWA/issues"
-  }
+  },
+  "homepage": "/about"
 }

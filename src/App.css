@@ -18,6 +18,7 @@ nav {
   justify-content: space-around;
   width: 80vw;
   margin: auto;
+  font-size: 20px;
 
 }
 
@@ -30,8 +31,15 @@ nav {
   margin: 5%;
 }
 
+/* about page styling */
+.about {
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
 /* for tablets & desktop */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 425px) {
   nav {
     height: 10vh;
   }

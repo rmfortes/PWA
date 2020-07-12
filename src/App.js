@@ -3,7 +3,7 @@ import "uswds/dist/css/uswds.css";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import ReadMe from "./Components/ReadMe/ReadMe";
+import About from "./Components/About/About";
 import Map from "./Components/Map/Map";
 import Camera from "./Components/Camera/Camera";
 
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Route path="/" exact component={ReadMe} />
+        <Route path="/about" exact component={About} />
         <Route path="/snap" exact component={Camera} />
         <Route path="/map" exact component={Map} />
       </div>

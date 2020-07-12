@@ -32,7 +32,7 @@ class Camera extends Component {
         />
 
         <form onSubmit={this.capture}>
-        <button class="usa-button usa-button--base usa-focus" onClick={this.capture}>SNAP PHOTO</button>
+        <button className="usa-button usa-button--base usa-focus" onClick={this.capture}>SNAP PHOTO</button>
         </form>
       </div>
     );
