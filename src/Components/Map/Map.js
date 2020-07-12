@@ -17,7 +17,9 @@ class MapContainer extends Component {
   }
 
   componentDidMount() {
+
     let currentComponent = this;
+
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
@@ -30,6 +32,22 @@ class MapContainer extends Component {
       })
     });
   }
+
+  // displayMarkers = () => {
+  //   return this.state.stores.map((store, index) => {
+  //     return (
+  //       <Marker
+  //         key={index}
+  //         id={index}
+  //         position={{
+  //           lat: store.latitude,
+  //           lng: store.longitude,
+  //         }}
+  //         onClick={() => console.log("You clicked me!")}
+  //       />
+  //     );
+  //   });
+  // };
 
   render() {
     return (
