@@ -16,24 +16,24 @@ class Camera extends Component {
 
   render() {
     const videoConstraints = {
-      width: 400,
-      height: 795
+      width: 500,
+      height: 500,
+      aspectRatio: 1/1
     };
 
     return (
-      <div>
+      <div >
         <Webcam
+          className="camera"
           audio={false}
-          height={710}
+          maxheight="100%"
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          width={370}
+          width="100%"
           videoConstraints={videoConstraints}
         />
-
-        <form onSubmit={this.capture}>
+        <br></br>
         <button className="usa-button usa-button--base usa-focus" onClick={this.capture}>SNAP PHOTO</button>
-        </form>
       </div>
     );
   }

@@ -19,23 +19,24 @@ nav {
   width: 80vw;
   margin: auto;
   font-size: 20px;
-
+  font-family: "Montserrat", sans-serif;
 }
 
-.link, .menulinks {
+.link,
+.menulinks {
   text-decoration: none;
   color: #999292;
 }
 
-.markdown {
-  margin: 5%;
-}
-
 /* about page styling */
 .about {
-  margin: 10px;
-  font-family: 'Montserrat', sans-serif;
+  margin: 20px;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
+}
+
+.camera {
+  margin-top: 10vh;
 }
 
 /* for tablets & desktop */
@@ -48,5 +49,11 @@ nav {
   }
   .menuButton {
     visibility: hidden;
+  }
+  button {
+    margin-left: 40vw;
+  }
+  .camera {
+    margin-top: 0;
   }
 }
