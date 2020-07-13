@@ -4,12 +4,11 @@ import NavbarMenu from "./NavbarMenu";
 
 const navBarLinks = [
   { item: "ABOUT", link: "/ABOUT" },
-  { item: "SNAP", link: "/snap" },
-  { item: "MAP", link: "/map" },
+  { item: "SNAP", link: "/SNAP" },
+  { item: "MAP", link: "/MAP" },
 ];
 
 class Navbar extends Component {
-
   render() {
     let navBar = navBarLinks.map((navBarLink, i) => (
       <NavLink
