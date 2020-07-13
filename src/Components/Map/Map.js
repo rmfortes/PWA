@@ -33,23 +33,6 @@ class MapContainer extends Component {
     });
   }
 
-  // displayMarkers = () => {
-  //   let currentComponent = this;
-  //   return currentComponent.state.stores.map((store, index) => {
-  //     return (
-  //       <Marker
-  //         key={index}
-  //         id={index}
-  //         position={{
-  //           lat: store.latitude,
-  //           lng: store.longitude,
-  //         }}
-  //         onClick={() => console.log("You clicked me!")}
-  //       />
-  //     );
-  //   });
-  // };
-
   render() {
     return (
       <div>
@@ -63,7 +46,6 @@ class MapContainer extends Component {
             lat: this.state.latitude,
             lng: this.state.longitude
           }} />
-          {/* {this.displayMarkers()} */}
         </Map>
       </div>
     );
