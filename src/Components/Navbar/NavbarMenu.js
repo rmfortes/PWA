@@ -1,15 +1,11 @@
-import React from 'react';
-import  { Link } from "react-router-dom";
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import React from "react";
+import { Link } from "react-router-dom";
+import IconButton from "@material-ui/core/IconButton";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
-const options = [
-  'ABOUT',
-  'SNAP',
-  'MAP'
-];
+const options = ["ABOUT", "SNAP", "MAP"];
 
 const ITEM_HEIGHT = 48;
 
@@ -45,14 +41,20 @@ export default function LongMenu() {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
+            width: "20ch",
           },
         }}
       >
         {options.map((option) => (
-          <Link to={option} className="menulinks"><MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option}
-          </MenuItem></Link>
+          <Link to={option} className="menulinks">
+            <MenuItem
+              key={option}
+              selected={option === "Pyxis"}
+              onClick={handleClose}
+            >
+              {option}
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </div>

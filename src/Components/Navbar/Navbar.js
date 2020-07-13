@@ -7,7 +7,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       navBarLinks: [
-        { item: "ABOUT", link: "/" },
+        { item: "ABOUT", link: "/ABOUT" },
         { item: "SNAP", link: "/snap" },
         { item: "MAP", link: "/map" },
       ],

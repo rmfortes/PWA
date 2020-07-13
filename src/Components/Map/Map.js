@@ -34,7 +34,8 @@ class MapContainer extends Component {
   }
 
   // displayMarkers = () => {
-  //   return this.state.stores.map((store, index) => {
+  //   let currentComponent = this;
+  //   return currentComponent.state.stores.map((store, index) => {
   //     return (
   //       <Marker
   //         key={index}

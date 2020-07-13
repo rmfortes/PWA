@@ -12,9 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Route path="/" exact component={About} />
-        <Route path="/snap" exact component={Camera} />
-        <Route path="/map" exact component={Map} />
+        <Route path="/ABOUT" exact component={About} />
+        <Route path="/SNAP" exact component={Camera} />
+        <Route path="/MAP" exact component={Map} />
       </div>
     );
   }
