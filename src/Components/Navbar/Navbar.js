@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import NavbarMenu from "./NavbarMenu";
 
+const navBarLinks = [
+  { item: "ABOUT", link: "/ABOUT" },
+  { item: "SNAP", link: "/snap" },
+  { item: "MAP", link: "/map" },
+];
+
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      navBarLinks: [
-        { item: "ABOUT", link: "/ABOUT" },
-        { item: "SNAP", link: "/snap" },
-        { item: "MAP", link: "/map" },
-      ],
-    };
-  }
 
   render() {
-    let navBarLinks = this.state.navBarLinks.map((navBarLink, i) => (
+    let navBar = navBarLinks.map((navBarLink, i) => (
       <NavLink
         exact
         to={navBarLink.link}
@@ -33,7 +29,7 @@ class Navbar extends Component {
     return (
       <div>
         <nav>
-          <div className="links">{navBarLinks}</div>
+          <div className="links">{navBar}</div>
           <NavbarMenu />
         </nav>
       </div>
